@@ -1,5 +1,4 @@
 import io.reactivex.Observable
-import io.reactivex.schedulers.Schedulers
 
 object Introduction {
 
@@ -8,7 +7,7 @@ object Introduction {
         createAndSubscribeObservable()
     }
 
-    fun createAndSubscribeObservable() {
+    private fun createAndSubscribeObservable() {
         Observable.just(1, 2, 3) // create an observable
                 .subscribe { // subscribe; observable won't do anything if no one subscribed to it
                     println("$it") // observable is just a stream of data, it doesn't do anything unless you do something with the emitted data.
